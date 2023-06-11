@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\anace\\.nuget\\packages\\": {}
+    "C:\\Users\\ofici\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anace\\Desktop\\AppleStoreTupinikim-main\\AppleStoreTupinikim\\AppleStoreTupinikim.csproj",
+      "projectUniqueName": "C:\\Projects\\CSharp\\AppleStoreTupinikim\\AppleStoreTupinikim\\AppleStoreTupinikim.csproj",
       "projectName": "AppleStoreTupinikim",
-      "projectPath": "C:\\Users\\anace\\Desktop\\AppleStoreTupinikim-main\\AppleStoreTupinikim\\AppleStoreTupinikim.csproj",
-      "packagesPath": "C:\\Users\\anace\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anace\\Desktop\\AppleStoreTupinikim-main\\AppleStoreTupinikim\\obj\\",
+      "projectPath": "C:\\Projects\\CSharp\\AppleStoreTupinikim\\AppleStoreTupinikim\\AppleStoreTupinikim.csproj",
+      "packagesPath": "C:\\Users\\ofici\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\CSharp\\AppleStoreTupinikim\\AppleStoreTupinikim\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\anace\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ofici\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
