@@ -7,5 +7,6 @@ namespace AppleStoreTupinikim.Data
     {
         public Context(DbContextOptions<Context> options) : base(options) { }
         public DbSet<ProdutoModel> Produto { get; set; }
+        public DbSet<UserModel> User { get; set; }
     }
 }

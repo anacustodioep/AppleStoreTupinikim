@@ -8,6 +8,8 @@ namespace AppleStoreTupinikim.Models
     public class ProdutoModel
     {
         [Key]
+        [Column("Id")]
+        public int Id { get; set; }
         [Display(Name = "Nome")]
         [Column("Nome")]
         public string Nome { get; set; }

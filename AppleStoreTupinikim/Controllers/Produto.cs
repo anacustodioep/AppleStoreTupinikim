@@ -10,16 +10,16 @@ using AppleStoreTupinikim.Models;
 
 namespace AppleStoreTupinikim.Controllers
 {
-    public class ProdutoModelsController : Controller
+    public class Produto : Controller
     {
         private readonly Context _context;
 
-        public ProdutoModelsController(Context context)
+        public Produto(Context context)
         {
             _context = context;
         }
 
-        // GET: ProdutoModels
+        // GET: Produto
         public async Task<IActionResult> Index()
         {
               return _context.Produto != null ? 
@@ -27,8 +27,8 @@ namespace AppleStoreTupinikim.Controllers
                           Problem("Entity set 'Context.Produto'  is null.");
         }
 
-        // GET: ProdutoModels/Details/5
-        public async Task<IActionResult> Details(string id)
+        // GET: Produto/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Produto == null)
             {
@@ -36,7 +36,7 @@ namespace AppleStoreTupinikim.Controllers
             }
 
             var produtoModel = await _context.Produto
-                .FirstOrDefaultAsync(m => m.Nome == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (produtoModel == null)
             {
                 return NotFound();
@@ -45,18 +45,18 @@ namespace AppleStoreTupinikim.Controllers
             return View(produtoModel);
         }
 
-        // GET: ProdutoModels/Create
+        // GET: Produto/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: ProdutoModels/Create
+        // POST: Produto/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,Valor,Estoque")] ProdutoModel produtoModel)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Valor,Estoque")] ProdutoModel produtoModel)
         {
             if (ModelState.IsValid)
             {
@@ -67,8 +67,8 @@ namespace AppleStoreTupinikim.Controllers
             return View(produtoModel);
         }
 
-        // GET: ProdutoModels/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        // GET: Produto/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Produto == null)
             {
@@ -83,14 +83,14 @@ namespace AppleStoreTupinikim.Controllers
             return View(produtoModel);
         }
 
-        // POST: ProdutoModels/Edit/5
+        // POST: Produto/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Nome,Valor,Estoque")] ProdutoModel produtoModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Valor,Estoque")] ProdutoModel produtoModel)
         {
-            if (id != produtoModel.Nome)
+            if (id != produtoModel.Id)
             {
                 return NotFound();
             }
@@ -104,7 +104,7 @@ namespace AppleStoreTupinikim.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProdutoModelExists(produtoModel.Nome))
+                    if (!ProdutoModelExists(produtoModel.Id))
                     {
                         return NotFound();
                     }
@@ -118,8 +118,8 @@ namespace AppleStoreTupinikim.Controllers
             return View(produtoModel);
         }
 
-        // GET: ProdutoModels/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        // GET: Produto/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Produto == null)
             {
@@ -127,7 +127,7 @@ namespace AppleStoreTupinikim.Controllers
             }
 
             var produtoModel = await _context.Produto
-                .FirstOrDefaultAsync(m => m.Nome == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (produtoModel == null)
             {
                 return NotFound();
@@ -136,10 +136,10 @@ namespace AppleStoreTupinikim.Controllers
             return View(produtoModel);
         }
 
-        // POST: ProdutoModels/Delete/5
+        // POST: Produto/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Produto == null)
             {
@@ -155,9 +155,9 @@ namespace AppleStoreTupinikim.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProdutoModelExists(string id)
+        private bool ProdutoModelExists(int id)
         {
-          return (_context.Produto?.Any(e => e.Nome == id)).GetValueOrDefault();
+          return (_context.Produto?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

@@ -24,28 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/ProdutoModels/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b01vZGVsc1xDcmVhdGUuY3NodG1s
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Produto/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/ProdutoModels/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b01vZGVsc1xEZWxldGUuY3NodG1s
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Produto/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/ProdutoModels/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b01vZGVsc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Produto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/ProdutoModels/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b01vZGVsc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/ProdutoModels/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b01vZGVsc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Produto/Criar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xDcmlhci5jc2h0bWw=
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Produto/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Produto/Index.cshtml]
@@ -58,6 +50,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Usuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Usuario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Usuario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Usuario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/CSharp/AppleStoreTupinikim/AppleStoreTupinikim/Views/_ViewImports.cshtml]
