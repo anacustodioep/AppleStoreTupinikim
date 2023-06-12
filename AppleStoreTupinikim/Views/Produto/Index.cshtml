@@ -1,47 +1,85 @@
 ﻿@model IEnumerable<AppleStoreTupinikim.Models.ProdutoModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de Produtos";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="text-center">
+    <h1 class="display-4">Listagem de Contatos</h1>
+    @*<p class="">Sis listagem de produto</p>*@
+    <br />
+    <div class="d-grid gap-2 d-md-flex">
+        <a role="button" class="btn btn-outline-primary rounded-pill" asp-controller="Produto" asp-action="Create">Inserir produtos</a>
+    </div>
+</div>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th scope="col">#</th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Valor)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Estoque)
             </th>
-            <th></th>
+            <th scope="col">Ações</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
         <tr>
+            <th scope="row">#</th>
+            <td>Iphone 14</td>
+            <td>6000,00</td>
+            <td>10</td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estoque)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a disabled role="button" class="btn btn-outline-primary rounded-pill me-1 disabled">Editar</a>
+                <a disabled role="button" class="btn btn-outline-danger rounded-pill disabled">Excluir</a>
             </td>
         </tr>
-}
+        <tr>
+            <th scope="row">#</th>
+            <td>Mc Book Air 13</td>
+            <td>6389,10</td>
+            <td>2</td>
+            <td>
+                <a disabled role="button" class="btn btn-outline-primary rounded-pill me-1 disabled">Editar</a>
+                <a disabled role="button" class="btn btn-outline-danger rounded-pill disabled">Excluir</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#</th>
+            <td>Apple Watch SE</td>
+            <td>2339,10</td>
+            <td>5</td>
+            <td>
+                <a disabled role="button" class="btn btn-outline-primary rounded-pill me-1 disabled">Editar</a>
+                <a disabled role="button" class="btn btn-outline-danger rounded-pill disabled">Excluir</a>
+            </td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row"> @Html.DisplayFor(modelItem => item.Id)</th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estoque)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" role="button" class="btn btn-outline-primary rounded-pill me-1">Editar</a>
+                    @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                    <a asp-action="Delete" asp-route-id="@item.Id" role="button" class="btn btn-outline-danger rounded-pill">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
