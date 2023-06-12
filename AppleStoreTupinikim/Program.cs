@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>(options => options.UseMySql("server=localhost;initial catalog=Produtos;uid=root;pwd=$PXqBRWh#7Yq@4Ew", ServerVersion.Parse("8.0.25-mysql")));
 //>>>>>>>>>>>
 //Roda no console
-//Add-Migration Criacao-Inicial -Context Context
+//Add-Migration Criacao-Inicial -Context Context 
 //Update-Database -Context Context
 var app = builder.Build();
 
