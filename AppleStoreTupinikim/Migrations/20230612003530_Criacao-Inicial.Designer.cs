@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppleStoreTupinikim.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230611233809_Criacao-Inicial")]
+    [Migration("20230612003530_Criacao-Inicial")]
     partial class CriacaoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,21 +22,44 @@ namespace AppleStoreTupinikim.Migrations
 
             modelBuilder.Entity("AppleStoreTupinikim.Models.ProdutoModel", b =>
                 {
-                    b.Property<string>("Nome")
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("Nome");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
                     b.Property<int>("Estoque")
                         .HasColumnType("int")
                         .HasColumnName("Estoque");
 
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("Nome");
+
                     b.Property<double>("Valor")
                         .HasColumnType("double")
                         .HasColumnName("Valor");
 
-                    b.HasKey("Nome");
+                    b.HasKey("Id");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("AppleStoreTupinikim.Models.UserModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

@@ -20,21 +20,44 @@ namespace AppleStoreTupinikim.Migrations
 
             modelBuilder.Entity("AppleStoreTupinikim.Models.ProdutoModel", b =>
                 {
-                    b.Property<string>("Nome")
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("Nome");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
                     b.Property<int>("Estoque")
                         .HasColumnType("int")
                         .HasColumnName("Estoque");
 
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("Nome");
+
                     b.Property<double>("Valor")
                         .HasColumnType("double")
                         .HasColumnName("Valor");
 
-                    b.HasKey("Nome");
+                    b.HasKey("Id");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("AppleStoreTupinikim.Models.UserModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }
